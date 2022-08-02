@@ -1,11 +1,17 @@
 # GRPC com node
 
-## Dpcker
+## Rodando com docker compose 
 
-Pra rodar com o docker basta montar o arquivo com
+`docker-compose up -d --build`
 
-`docker build -t hiaguedes/grpc-node .`
+Vai se subir os dois containers `grpc-server` e `grpc-client` o client estara escutando na porta 3000
 
-e 
+Fique escutando os logs com 
 
-`docker run -it hiaguedes/grpc-node`
+`docker-compose logs -f`
+
+e no terminal (que sera o client) rode algo como 
+
+`curl localhost:3000/Hiago`
+
+Voce escutara uma resposta do lado do client como `Hello Hiago`
